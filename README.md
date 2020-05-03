@@ -57,18 +57,18 @@ Spring Boot Microservices Application
     8.  Endpoints
         a.  Create Profile
             i.  HTTP POST - http://localhost:9090/assignement/profile
-                *   Request Body Format
-                    {
-                    	"address" : "abc",
-	                    "phoneNumber" : 123
-                    }
+            ii. Request Body Format
+                {
+                    "address" : "abc",
+	                "phoneNumber" : 123
+                }
         b.  Update Profile
             i.  HTTP PUT - http://localhost:9090/assignement/profile
-                *   Request Body Format
-                    {
-                    	"address" : "abc",
-	                    "phoneNumber" : 123
-                    }
+            ii. Request Body Format
+                {
+                    "address" : "abc",
+	                "phoneNumber" : 123
+                }
         c.  Delete Profile
             i.  HTTP DELETE - http://localhost:9090/assignement/profile
         
