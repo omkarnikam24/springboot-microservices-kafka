@@ -50,7 +50,7 @@ Spring Boot Microservices Application
 	            "password" : "12345"
             }
         *   If successful, copy JWT token from value of `Authorization` Header from response.  JWT Token format is similar to `Bearer eyssdfksd.eyaswerdfds.Efsdfkljlvunidd`
-    7.  **Use the above JWT token for all the requests to be made through auth-service. Add a header in the request**
+    7.  **Use the above JWT token for all the requests to be made through auth-service. Add a header in the request****BOLD**
         *   Header format
                 Key - Authorization
                 Value - <generated JWT Token>
