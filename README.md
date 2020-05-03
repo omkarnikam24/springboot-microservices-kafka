@@ -25,7 +25,7 @@ Spring Boot Microservices Application
         *  Go to eureka-service directory
         *  Execute build command: `mvn clean install`
         *  Execute start command: `mvn spring-boot:run`
-        *  Verify if the service is up by visiting - [](http://localhost:8761/)
+        *  Verify if the service is up by visiting - http://localhost:8761/
     4.  Start auth-service
         *  Go to auth-service directory
         *  Execute build command: `mvn clean install`
