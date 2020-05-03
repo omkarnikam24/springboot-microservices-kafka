@@ -31,15 +31,44 @@ Spring Boot Microservices Application
         *  Execute build command: `mvn clean install`
         *  Execute start command: `mvn spring-boot:run`
         *  Verify if the service is up by visiting `authdb` H2 Database for auth-service - http://localhost:9090/h2-console
+            *   url: jdbc:h2:mem:authdb
+            *   username: sa
+            *   password:
     5.  Start profile-service
         *  Go to profile-service directory
         *  Execute build command: `mvn clean install`
         *  Execute start command: `mvn spring-boot:run`
         *  Verify if the service is up by visiting `profiledb` H2 Database for profile-service - http://localhost:8888/h2-console
+            *   url: jdbc:h2:mem:prodiledb
+            *   username: sa
+            *   password:
     6.  Login to the app
         *  URL - http://localhost:9090/assignement/login (POST)
         *  Request Body Format
-            `{
+            {
 	            "username" : "omkar",
 	            "password" : "12345"
-            }`
+            }
+        *   If successful, copy JWT token from value of `Authorization` Header from response.  JWT Token format is similar to `Bearer eyssdfksd.eyaswerdfds.Efsdfkljlvunidd`
+    7.  **Use the above JWT token for all the requests to be made through auth-service. Add a header in the request**
+        *   Header format
+                Key - Authorization
+                Value - <generated JWT Token>
+    8.  Endpoints
+        *   Create Profile
+            *   HTTP POST - http://localhost:9090/assignement/profile
+                *   Request Body Format
+                    {
+                    	"address" : "abc",
+	                    "phoneNumber" : 123
+                    }
+        *   Update Profile
+            *   HTTP PUT - http://localhost:9090/assignement/profile
+                *   Request Body Format
+                    {
+                    	"address" : "abc",
+	                    "phoneNumber" : 123
+                    }
+        *   Delete Profile
+            *   HTTP DELETE - http://localhost:9090/assignement/profile
+        
