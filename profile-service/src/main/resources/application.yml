@@ -1,0 +1,32 @@
+server:
+  port: 8888
+  error:
+    include-stacktrace: on-trace-param
+spring:
+  application:
+    name: profile-service
+  datasource:
+    url: jdbc:h2:mem:profiledb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: profile
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+eureka:
+  client:
+    region: default
+    service-url:
+      default-zone: http://localhost:8761/eureka

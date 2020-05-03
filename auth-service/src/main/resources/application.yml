@@ -1,0 +1,44 @@
+server:
+  port: 9090
+  error:
+    include-stacktrace: on-trace-param
+spring:
+  application:
+    name: auth-server
+  datasource:
+    url: jdbc:h2:mem:authdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+com:
+  amdocs:
+    kafka:
+      topic-name: profile-topic
+    security:
+      jwt:
+        expirationInSeconds: 3600
+    external:
+      application:
+        name: PROFILE-SERVICE    
