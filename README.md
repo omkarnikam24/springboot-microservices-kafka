@@ -13,7 +13,7 @@ Spring Boot Microservices Application
         This acts as a Eureka Server.
     
     2.  auth-service
-        This service acts as a gateway to the application. User authentication and authorization is done here.
+        This service acts as a gateway to the application. User authentication and authorization is done here. JWT Username and Password Authentication is implemented.
         
     3.  profile-service
         This service performs User Profile operations.
