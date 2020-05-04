@@ -43,7 +43,8 @@ Spring Boot Microservices Application
             i.   url: jdbc:h2:mem:prodiledb
             ii.   username: sa
             iii.   password:
-    6.  Login to the app
+    6.  After starting all the services, wait for at least 30 seconds before hitting any profile endpoint, so that services are registered to Eureka.
+    7.  Login to the app
         a.  URL - http://localhost:9090/assignement/login (POST)
         b.  Request Body Format
             {
@@ -52,11 +53,11 @@ Spring Boot Microservices Application
             }
         c.  If successful, copy JWT token from value of `Authorization` Header from response.
             JWT Token format is similar to `Bearer eyssdfksd.eyaswerdfds.Efsdfkljlvunidd`
-    7.  **Use the above JWT token for all the requests to be made through auth-service. Add a header in the request**
+    8.  **Use the above JWT token for all the requests to be made through auth-service. Add a header in the request**
         a.  Header format
             i.  Key - Authorization
             ii. Value - <generated JWT Token>
-    8.  Endpoints
+    9.  Endpoints
         a.  Create Profile
             i.  HTTP POST - http://localhost:9090/assignement/profile
             ii. Request Body Format
