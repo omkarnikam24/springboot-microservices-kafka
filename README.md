@@ -19,7 +19,7 @@
         This service performs User Profile operations.
 
 ### Steps to run
-    1.  Start Zookeeper(port - 2181) and Kafka (port - 9092).
+    1.  Start Zookeeper (port - 2181) and Kafka (port - 9092).
     2.  Kafka Topic to be used will be created automatically at application startup. Topic Name used - profile-topic
     3.  Start eureka-service
         a.  Go to eureka-service directory
