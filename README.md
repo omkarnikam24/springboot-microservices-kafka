@@ -1,5 +1,4 @@
-# Assignment
-Spring Boot Microservices Application
+# Spring Boot Microservices with Kafka
 
 ### Prerequisite
     Java version : 8
